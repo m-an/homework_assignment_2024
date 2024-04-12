@@ -78,7 +78,13 @@ GEM
     debug (1.9.1)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    diff-lcs (1.5.1)
     erubi (1.12.0)
+    factory_bot (6.4.6)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.4.3)
+      factory_bot (~> 6.4)
+      railties (>= 5.0.0)
     faker (3.2.3)
       i18n (>= 1.8.11, < 2)
     globalid (1.2.1)
@@ -120,6 +126,10 @@ GEM
     nio4r (2.7.0)
     nokogiri (1.16.0-x86_64-darwin)
       racc (~> 1.4)
+    pagy (8.1.0)
+    parallel (1.24.0)
+    parallel_tests (4.6.1)
+      parallel
     psych (5.1.2)
       stringio
     puma (6.4.2)
@@ -157,11 +167,32 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.1.0)
+    ransack (4.1.1)
+      activerecord (>= 6.1.5)
+      activesupport (>= 6.1.5)
+      i18n
     rdoc (6.6.2)
       psych (>= 4.0.0)
     redis (4.8.1)
     reline (0.4.2)
       io-console (~> 0.5)
+    rspec-core (3.13.0)
+      rspec-support (~> 3.13.0)
+    rspec-expectations (3.13.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-mocks (3.13.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-rails (6.1.2)
+      actionpack (>= 6.1)
+      activesupport (>= 6.1)
+      railties (>= 6.1)
+      rspec-core (~> 3.13)
+      rspec-expectations (~> 3.13)
+      rspec-mocks (~> 3.13)
+      rspec-support (~> 3.13)
+    rspec-support (3.13.1)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -198,13 +229,18 @@ DEPENDENCIES
   bootsnap
   cssbundling-rails
   debug
+  factory_bot_rails
   faker
   jbuilder
   jsbundling-rails
   mysql2 (~> 0.5.6)
+  pagy
+  parallel_tests
   puma
   rails (~> 7.0.8)
+  ransack
   redis (~> 4.0)
+  rspec-rails (~> 6.1.2)
   sprockets-rails
   stimulus-rails
   turbo-rails

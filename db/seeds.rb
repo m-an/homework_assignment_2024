@@ -2,7 +2,9 @@
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
 
-10.times do |i|
+# increase the amount of companies we seed so the pagination would make sense locally too
+# i.e. improve developer experience making it closer to real life
+100.times do |i|
   Company.create(
     name: Faker::Company.name,
     industry: Faker::Company.industry,
@@ -12,7 +14,8 @@ end
 
 statuses = ["pending", "won", "lost"]
 
-30.times do |i|
+# increase the amount of deals for the same purpose
+300.times do |i|
   Deal.create(
     name: "Deal #{i}",
     status: statuses.sample,
